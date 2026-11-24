@@ -151,8 +151,41 @@ activemq-data/
 
 # Environments
 .env
+.env.*
+!.env.example
 .envrc
 .venv
+.venv-real
+.venv*/
+frontend/node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+frontend/.env.local
+frontend/.env.*.local
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+*.pem
+*.key
+*.pfx
+*.safetensors
+*.gguf
+*.onnx
+*.pdparams
+*.sqlite-journal
+uploads/
+originals/
+checkpoints/
+ocr-output/
+logs/
+.paddlex/
+.ollama/
+/vlmtest.py
 env/
 venv/
 ENV/
@@ -218,6 +251,3 @@ tempCodeRunnerFile.py
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-# Streamlit
-.streamlit/secrets.toml

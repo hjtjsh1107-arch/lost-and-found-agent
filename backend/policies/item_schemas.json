@@ -1,0 +1,976 @@
+{
+  "schema_version": "1.0.0",
+  "common": [
+    "major_category_code",
+    "minor_category_code",
+    "name",
+    "subcategory",
+    "quantity"
+  ],
+  "fallback": [
+    "features"
+  ],
+  "fields": {
+    "major_category_code": {
+      "label": "공식 대분류",
+      "data_type": "select",
+      "required": false,
+      "description": "경찰청 공통코드의 대분류",
+      "options": [],
+      "extraction_source": "staff",
+      "default_visibility": "public",
+      "store": true
+    },
+    "minor_category_code": {
+      "label": "공식 소분류",
+      "data_type": "select",
+      "required": false,
+      "description": "선택한 대분류에 속한 경찰청 소분류",
+      "options": [],
+      "extraction_source": "staff",
+      "default_visibility": "public",
+      "store": true
+    },
+    "name": {
+      "label": "물품명",
+      "data_type": "string",
+      "required": true,
+      "description": "사진에 보이는 주요 물품의 이름",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "subcategory": {
+      "label": "관찰된 물품 유형",
+      "data_type": "string",
+      "required": false,
+      "description": "공식 분류명과 별개인 사진 속 구체적인 유형",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "quantity": {
+      "label": "수량",
+      "data_type": "number",
+      "required": true,
+      "description": "접수된 물품 수",
+      "options": [],
+      "extraction_source": "staff",
+      "default_visibility": "public",
+      "store": true
+    },
+    "color": {
+      "label": "색상",
+      "data_type": "string",
+      "required": false,
+      "description": "물품 본체의 대표 색을 배경과 구분",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "brand": {
+      "label": "브랜드",
+      "data_type": "string",
+      "required": false,
+      "description": "사진 또는 문자에서 확인되는 브랜드",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "model": {
+      "label": "모델명",
+      "data_type": "string",
+      "required": false,
+      "description": "제품에 보이는 모델명",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "material": {
+      "label": "재질",
+      "data_type": "string",
+      "required": false,
+      "description": "확인 가능한 물품 재질",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "pattern": {
+      "label": "무늬",
+      "data_type": "string",
+      "required": false,
+      "description": "표면의 무늬",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "features": {
+      "label": "외관 특징",
+      "data_type": "string",
+      "required": false,
+      "description": "사진에서 확인되는 물품의 일반 외관",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "damage": {
+      "label": "파손 여부",
+      "data_type": "boolean",
+      "required": false,
+      "description": "사진에서 확인할 수 있는 파손 여부",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "condition": {
+      "label": "파손 및 오염 상태",
+      "data_type": "string",
+      "required": false,
+      "description": "관찰되는 오염, 마모 또는 손상",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "size": {
+      "label": "사이즈",
+      "data_type": "string",
+      "required": false,
+      "description": "라벨 또는 사진에서 확인되는 사이즈",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "shape": {
+      "label": "형태",
+      "data_type": "string",
+      "required": false,
+      "description": "물품의 형태나 현재 상태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "part_colors": {
+      "label": "부위별 색상",
+      "data_type": "string",
+      "required": false,
+      "description": "부위와 해당 색상",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "handle_color": {
+      "label": "손잡이 색상",
+      "data_type": "string",
+      "required": false,
+      "description": "본체 색과 구분되는 손잡이 색",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "handle": {
+      "label": "손잡이 형태",
+      "data_type": "string",
+      "required": false,
+      "description": "손잡이의 형태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "cover": {
+      "label": "우산 커버 유무",
+      "data_type": "boolean",
+      "required": false,
+      "description": "우산 커버가 보이는지 여부",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "accessories": {
+      "label": "부속품",
+      "data_type": "string",
+      "required": false,
+      "description": "물품과 연결이 확인되는 부속품",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "manufacturer": {
+      "label": "제조사",
+      "data_type": "string",
+      "required": false,
+      "description": "제품 표면에서 확인되는 제조사",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "device_type": {
+      "label": "기종",
+      "data_type": "string",
+      "required": false,
+      "description": "사진에서 확인되는 기기 유형",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "case_type": {
+      "label": "케이스 종류",
+      "data_type": "string",
+      "required": false,
+      "description": "실제 케이스 유형",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "case_color": {
+      "label": "케이스 색상",
+      "data_type": "string",
+      "required": false,
+      "description": "케이스 자체의 색상",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "has_sticker": {
+      "label": "스티커 부착 여부",
+      "data_type": "boolean",
+      "required": false,
+      "description": "스티커가 보이는지 여부",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "sticker": {
+      "label": "스티커 특징",
+      "data_type": "string",
+      "required": false,
+      "description": "스티커 위치와 색 또는 일반 형태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "screen": {
+      "label": "화면 상태",
+      "data_type": "string",
+      "required": false,
+      "description": "촬영된 화면의 상태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "wallpaper": {
+      "label": "배경화면 특징",
+      "data_type": "string",
+      "required": false,
+      "description": "이미 촬영된 사진에서 보이는 배경화면; 원문 미수집",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "restricted",
+      "store": false
+    },
+    "key_type": {
+      "label": "열쇠 유형",
+      "data_type": "select",
+      "required": false,
+      "description": "사진으로 확인한 자동차열쇠 형식",
+      "options": [
+        "스마트키",
+        "리모컨키",
+        "기계식 열쇠",
+        "기타"
+      ],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "button_count": {
+      "label": "버튼 개수",
+      "data_type": "number",
+      "required": false,
+      "description": "실제로 셀 수 있는 버튼 수",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "key_ring": {
+      "label": "열쇠고리 특징",
+      "data_type": "string",
+      "required": false,
+      "description": "고리와 부착된 장식의 외관",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "plate_type": {
+      "label": "번호판 유형",
+      "data_type": "string",
+      "required": false,
+      "description": "차량의 번호와 별개인 번호판 유형",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "plate_identifier": {
+      "label": "번호판 식별 정보",
+      "data_type": "string",
+      "required": false,
+      "description": "개인 식별이 가능한 번호판 번호 미수집",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "restricted",
+      "store": false
+    },
+    "mount": {
+      "label": "거치 방식",
+      "data_type": "string",
+      "required": false,
+      "description": "보이는 거치 부품",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "card_type": {
+      "label": "카드 유형",
+      "data_type": "select",
+      "required": false,
+      "description": "확인할 수 있는 카드 종류",
+      "options": [
+        "신용카드",
+        "체크카드",
+        "교통카드",
+        "일반카드",
+        "기타"
+      ],
+      "extraction_source": "vlm",
+      "default_visibility": "public",
+      "store": true
+    },
+    "issuer": {
+      "label": "은행 또는 발급기관",
+      "data_type": "string",
+      "required": false,
+      "description": "발급기관 명칭만 확인",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "cardholder": {
+      "label": "성명",
+      "data_type": "string",
+      "required": false,
+      "description": "카드 소유자의 원문 성명 미수집",
+      "options": [],
+      "extraction_source": "ocr",
+      "default_visibility": "restricted",
+      "store": false
+    },
+    "card_number": {
+      "label": "카드번호",
+      "data_type": "string",
+      "required": false,
+      "description": "전체 카드번호, 보안코드 및 유효기간 미수집",
+      "options": [],
+      "extraction_source": "ocr",
+      "default_visibility": "restricted",
+      "store": false
+    },
+    "card_design": {
+      "label": "카드 디자인",
+      "data_type": "string",
+      "required": false,
+      "description": "개인정보를 제외한 일반적인 디자인",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "currency": {
+      "label": "통화",
+      "data_type": "string",
+      "required": false,
+      "description": "사진이나 담당자가 확인한 통화",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "cash_kind": {
+      "label": "화폐 종류",
+      "data_type": "multiselect",
+      "required": false,
+      "description": "확인 가능한 화폐 유형",
+      "options": [
+        "지폐",
+        "동전",
+        "수표",
+        "기타"
+      ],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "denominations": {
+      "label": "권종별 수량",
+      "data_type": "denominations",
+      "required": false,
+      "description": "담당자가 확인한 권종과 장수 또는 개수",
+      "options": [],
+      "extraction_source": "staff",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "cash_complete": {
+      "label": "전체 수량 확인",
+      "data_type": "boolean",
+      "required": false,
+      "description": "모든 권종별 수량을 담당자가 확인했는지 여부",
+      "options": [],
+      "extraction_source": "staff",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "total_amount": {
+      "label": "확인된 총액",
+      "data_type": "number",
+      "required": false,
+      "description": "전체 확인된 권종별 수량을 합산한 값",
+      "options": [],
+      "extraction_source": "calculated",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "storage": {
+      "label": "보관 형태",
+      "data_type": "string",
+      "required": false,
+      "description": "봉투, 케이스 등 보관 형태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "strap": {
+      "label": "끈 또는 멜빵",
+      "data_type": "string",
+      "required": false,
+      "description": "관찰 가능한 끈 형태",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "closure": {
+      "label": "여닫는 방식",
+      "data_type": "string",
+      "required": false,
+      "description": "지퍼나 단추 등 여닫는 방식",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "book_title": {
+      "label": "책 제목",
+      "data_type": "string",
+      "required": false,
+      "description": "표지에 보이는 책 제목",
+      "options": [],
+      "extraction_source": "vlm_ocr",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "document_kind": {
+      "label": "문서 유형",
+      "data_type": "string",
+      "required": false,
+      "description": "개인 정보의 원문을 제외한 문서 종류",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "item_kind": {
+      "label": "도구 종류",
+      "data_type": "string",
+      "required": false,
+      "description": "사진에서 확인되는 일반적인 도구 종류",
+      "options": [],
+      "extraction_source": "vlm",
+      "default_visibility": "verification_only",
+      "store": true
+    },
+    "serial_mark": {
+      "label": "식별 표기",
+      "data_type": "string",
+      "required": false,
+      "description": "고유 번호 등 식별정보 미수집",
+      "options": [],
+      "extraction_source": "ocr",
+      "default_visibility": "restricted",
+      "store": false
+    }
+  },
+  "major": {
+    "가방": [
+      "color",
+      "brand",
+      "material",
+      "strap",
+      "closure",
+      "features",
+      "condition"
+    ],
+    "도서용품": [
+      "book_title",
+      "color",
+      "features",
+      "condition"
+    ],
+    "서류": [
+      "document_kind",
+      "color",
+      "storage",
+      "features",
+      "serial_mark"
+    ],
+    "산업용품": [
+      "item_kind",
+      "manufacturer",
+      "color",
+      "material",
+      "features",
+      "condition"
+    ],
+    "스포츠용품": [
+      "brand",
+      "color",
+      "size",
+      "material",
+      "features",
+      "condition"
+    ],
+    "자동차": [
+      "manufacturer",
+      "color",
+      "features",
+      "damage"
+    ],
+    "전자기기": [
+      "manufacturer",
+      "brand",
+      "model",
+      "color",
+      "features",
+      "damage"
+    ],
+    "지갑": [
+      "color",
+      "brand",
+      "material",
+      "closure",
+      "features",
+      "condition"
+    ],
+    "컴퓨터": [
+      "manufacturer",
+      "model",
+      "color",
+      "case_type",
+      "features",
+      "damage"
+    ],
+    "휴대폰": [
+      "manufacturer",
+      "model",
+      "device_type",
+      "color",
+      "case_type",
+      "case_color",
+      "has_sticker",
+      "sticker",
+      "screen",
+      "wallpaper",
+      "features",
+      "damage"
+    ],
+    "의류": [
+      "color",
+      "brand",
+      "size",
+      "material",
+      "pattern",
+      "features",
+      "condition",
+      "part_colors"
+    ],
+    "현금": [
+      "currency",
+      "cash_kind",
+      "denominations",
+      "cash_complete",
+      "total_amount",
+      "storage",
+      "features",
+      "condition"
+    ],
+    "유가증권": [
+      "document_kind",
+      "issuer",
+      "storage",
+      "features",
+      "serial_mark"
+    ],
+    "증명서": [
+      "document_kind",
+      "issuer",
+      "storage",
+      "serial_mark"
+    ],
+    "귀금속": [
+      "color",
+      "material",
+      "pattern",
+      "shape",
+      "features",
+      "condition"
+    ],
+    "카드": [
+      "card_type",
+      "issuer",
+      "cardholder",
+      "card_number",
+      "color",
+      "card_design",
+      "features",
+      "damage"
+    ],
+    "쇼핑백": [
+      "color",
+      "brand",
+      "material",
+      "pattern",
+      "features",
+      "condition"
+    ],
+    "악기": [
+      "manufacturer",
+      "brand",
+      "material",
+      "color",
+      "shape",
+      "features",
+      "condition"
+    ],
+    "유류품": [
+      "features",
+      "storage",
+      "condition"
+    ],
+    "무주물": [
+      "features",
+      "storage",
+      "condition"
+    ],
+    "기타물품": [
+      "features"
+    ]
+  },
+  "minor": {
+    "자동차": {
+      "자동차열쇠": [
+        "manufacturer",
+        "key_type",
+        "color",
+        "button_count",
+        "key_ring",
+        "features",
+        "damage"
+      ],
+      "네비게이션": [
+        "manufacturer",
+        "model",
+        "mount",
+        "screen",
+        "features",
+        "damage"
+      ],
+      "자동차번호판": [
+        "plate_type",
+        "plate_identifier",
+        "color",
+        "condition",
+        "features"
+      ],
+      "임시번호판": [
+        "plate_type",
+        "plate_identifier",
+        "color",
+        "condition",
+        "features"
+      ],
+      "기타용품": [
+        "features"
+      ]
+    }
+  },
+  "observed": [
+    {
+      "schema_id": "trench-coat",
+      "major": "의류",
+      "aliases": [
+        "트렌치코트",
+        "트렌치 코트",
+        "코트",
+        "외투",
+        "재킷",
+        "자켓"
+      ],
+      "suggested_minor": [
+        "기타의류"
+      ],
+      "fields": [
+        "color",
+        "brand",
+        "size",
+        "material",
+        "pattern",
+        "features",
+        "condition",
+        "part_colors",
+        "shape",
+        "closure"
+      ]
+    },
+    {
+      "schema_id": "scarf-gloves",
+      "major": "의류",
+      "aliases": [
+        "목도리",
+        "스카프",
+        "장갑",
+        "머플러"
+      ],
+      "suggested_minor": [
+        "기타의류"
+      ],
+      "fields": [
+        "color",
+        "brand",
+        "size",
+        "material",
+        "pattern",
+        "features",
+        "condition",
+        "part_colors"
+      ]
+    },
+    {
+      "schema_id": "umbrella",
+      "major": "기타물품",
+      "aliases": [
+        "우산",
+        "접이식우산",
+        "장우산"
+      ],
+      "suggested_minor": [
+        "기타"
+      ],
+      "fields": [
+        "color",
+        "brand",
+        "pattern",
+        "handle_color",
+        "handle",
+        "cover",
+        "shape",
+        "features",
+        "damage",
+        "part_colors",
+        "accessories"
+      ]
+    },
+    {
+      "schema_id": "phone",
+      "major": "휴대폰",
+      "aliases": [
+        "휴대폰",
+        "휴대전화",
+        "스마트폰",
+        "아이폰"
+      ],
+      "suggested_minor": [
+        "기타휴대폰"
+      ],
+      "fields": [
+        "manufacturer",
+        "model",
+        "device_type",
+        "color",
+        "case_type",
+        "case_color",
+        "has_sticker",
+        "sticker",
+        "screen",
+        "wallpaper",
+        "features",
+        "damage"
+      ]
+    },
+    {
+      "schema_id": "car-key",
+      "major": "자동차",
+      "aliases": [
+        "스마트키",
+        "차량용키",
+        "자동차열쇠",
+        "차키",
+        "자동차키"
+      ],
+      "matched_minor": "자동차열쇠",
+      "fields": [
+        "manufacturer",
+        "key_type",
+        "color",
+        "button_count",
+        "key_ring",
+        "features",
+        "damage"
+      ]
+    },
+    {
+      "schema_id": "credit-card",
+      "major": "카드",
+      "aliases": [
+        "신용카드",
+        "체크카드"
+      ],
+      "matched_minor": "신용(체크)카드",
+      "fields": [
+        "card_type",
+        "issuer",
+        "cardholder",
+        "card_number",
+        "color",
+        "card_design",
+        "features",
+        "damage"
+      ]
+    },
+    {
+      "schema_id": "cash",
+      "major": "현금",
+      "aliases": [
+        "현금",
+        "지폐",
+        "동전",
+        "화폐"
+      ],
+      "matched_minor": "현금",
+      "fields": [
+        "currency",
+        "cash_kind",
+        "denominations",
+        "cash_complete",
+        "total_amount",
+        "storage",
+        "features",
+        "condition"
+      ]
+    },
+    {
+      "schema_id": "bag",
+      "major": "가방",
+      "aliases": [
+        "가방",
+        "백팩",
+        "배낭"
+      ],
+      "suggested_minor": [
+        "기타가방"
+      ],
+      "fields": [
+        "color",
+        "brand",
+        "material",
+        "strap",
+        "closure",
+        "features",
+        "condition"
+      ]
+    },
+    {
+      "schema_id": "wallet",
+      "major": "지갑",
+      "aliases": [
+        "지갑"
+      ],
+      "suggested_minor": [
+        "기타 지갑"
+      ],
+      "fields": [
+        "color",
+        "brand",
+        "material",
+        "closure",
+        "features",
+        "condition"
+      ]
+    }
+  ],
+  "staff_only_categories": [
+    "유류품",
+    "무주물"
+  ],
+  "hold_photo_categories": [
+    "휴대폰",
+    "카드",
+    "증명서",
+    "서류",
+    "현금",
+    "유가증권"
+  ],
+  "hold_photo_minors": [
+    "자동차번호판",
+    "임시번호판"
+  ],
+  "guarded_text_categories": [
+    "카드",
+    "현금",
+    "증명서",
+    "서류",
+    "유가증권",
+    "휴대폰"
+  ],
+  "guarded_text_minors": [
+    "자동차번호판",
+    "임시번호판"
+  ]
+}

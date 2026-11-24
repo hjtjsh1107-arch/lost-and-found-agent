@@ -1,0 +1,8 @@
+{
+  "우산": {"required": ["name", "color"], "detail_1": "장우산·접이식", "detail_2": "손잡이 형태"},
+  "휴대전화": {"required": ["name", "color"], "detail_1": "케이스 특징", "detail_2": "외관 손상 위치"},
+  "지갑": {"required": ["name", "color"], "detail_1": "여닫는 방식", "detail_2": "수납 구조"},
+  "카드": {"required": ["name"], "detail_1": "카드 종류", "detail_2": "본인확인용 특징"},
+  "가방": {"required": ["name", "color"], "detail_1": "끈 형태", "detail_2": "부착물 특징"},
+  "기타": {"required": ["name"], "detail_1": "식별 특징", "detail_2": "부속품"}
+}

@@ -1,0 +1,522 @@
+{
+  "status": "api_snapshot",
+  "collected_on": "2026-11-24",
+  "sources": [
+    "https://www.data.go.kr/data/15000651/openapi.do"
+  ],
+  "web_comparison": "not_verified",
+  "major_count": 21,
+  "minor_count": 85,
+  "categories": [
+    {
+      "major_code": "PRA000",
+      "major_name": "가방",
+      "minor_code": "PRA100",
+      "minor_name": "여성용가방"
+    },
+    {
+      "major_code": "PRA000",
+      "major_name": "가방",
+      "minor_code": "PRA200",
+      "minor_name": "남성용가방"
+    },
+    {
+      "major_code": "PRA000",
+      "major_name": "가방",
+      "minor_code": "PRA300",
+      "minor_name": "기타가방"
+    },
+    {
+      "major_code": "PRB000",
+      "major_name": "도서용품",
+      "minor_code": "PRB100",
+      "minor_name": "학습서적"
+    },
+    {
+      "major_code": "PRB000",
+      "major_name": "도서용품",
+      "minor_code": "PRB200",
+      "minor_name": "소설"
+    },
+    {
+      "major_code": "PRB000",
+      "major_name": "도서용품",
+      "minor_code": "PRB300",
+      "minor_name": "컴퓨터서적"
+    },
+    {
+      "major_code": "PRB000",
+      "major_name": "도서용품",
+      "minor_code": "PRB400",
+      "minor_name": "만화책"
+    },
+    {
+      "major_code": "PRB000",
+      "major_name": "도서용품",
+      "minor_code": "PRB500",
+      "minor_name": "기타서적"
+    },
+    {
+      "major_code": "PRC000",
+      "major_name": "서류",
+      "minor_code": "PRC100",
+      "minor_name": "서류"
+    },
+    {
+      "major_code": "PRC000",
+      "major_name": "서류",
+      "minor_code": "PRC200",
+      "minor_name": "기타물품"
+    },
+    {
+      "major_code": "PRD000",
+      "major_name": "산업용품",
+      "minor_code": "PRD100",
+      "minor_name": "기타물품"
+    },
+    {
+      "major_code": "PRE000",
+      "major_name": "스포츠용품",
+      "minor_code": "PRE100",
+      "minor_name": "스포츠용품"
+    },
+    {
+      "major_code": "PRE000",
+      "major_name": "스포츠용품",
+      "minor_code": "PRE200",
+      "minor_name": "수영복"
+    },
+    {
+      "major_code": "PRE000",
+      "major_name": "스포츠용품",
+      "minor_code": "PRE300",
+      "minor_name": "수영물품"
+    },
+    {
+      "major_code": "PRF000",
+      "major_name": "자동차",
+      "minor_code": "PRF100",
+      "minor_name": "자동차열쇠"
+    },
+    {
+      "major_code": "PRF000",
+      "major_name": "자동차",
+      "minor_code": "PRF200",
+      "minor_name": "네비게이션"
+    },
+    {
+      "major_code": "PRF000",
+      "major_name": "자동차",
+      "minor_code": "PRF300",
+      "minor_name": "자동차번호판"
+    },
+    {
+      "major_code": "PRF000",
+      "major_name": "자동차",
+      "minor_code": "PRF400",
+      "minor_name": "기타용품"
+    },
+    {
+      "major_code": "PRF000",
+      "major_name": "자동차",
+      "minor_code": "PRF500",
+      "minor_name": "임시번호판"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG100",
+      "minor_name": "PMP"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG200",
+      "minor_name": "MP3"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG300",
+      "minor_name": "PDA"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG400",
+      "minor_name": "카메라"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG500",
+      "minor_name": "전자수첩"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG600",
+      "minor_name": "기타용품"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG700",
+      "minor_name": "태블릿"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG800",
+      "minor_name": "스마트워치"
+    },
+    {
+      "major_code": "PRG000",
+      "major_name": "전자기기",
+      "minor_code": "PRG900",
+      "minor_name": "무선이어폰"
+    },
+    {
+      "major_code": "PRH000",
+      "major_name": "지갑",
+      "minor_code": "PRH100",
+      "minor_name": "여성용 지갑"
+    },
+    {
+      "major_code": "PRH000",
+      "major_name": "지갑",
+      "minor_code": "PRH200",
+      "minor_name": "남성용 지갑"
+    },
+    {
+      "major_code": "PRH000",
+      "major_name": "지갑",
+      "minor_code": "PRH300",
+      "minor_name": "기타 지갑"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI100",
+      "minor_name": "삼성노트북"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI200",
+      "minor_name": "LG노트북"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI300",
+      "minor_name": "삼보노트북"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI400",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI500",
+      "minor_name": "HP노트북"
+    },
+    {
+      "major_code": "PRI000",
+      "major_name": "컴퓨터",
+      "minor_code": "PRI600",
+      "minor_name": "애플노트북"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ100",
+      "minor_name": "삼성휴대폰"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ200",
+      "minor_name": "LG휴대폰"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ300",
+      "minor_name": "스카이휴대폰"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ400",
+      "minor_name": "아이폰"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ500",
+      "minor_name": "기타통신기기"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ600",
+      "minor_name": "모토로라휴대폰"
+    },
+    {
+      "major_code": "PRJ000",
+      "major_name": "휴대폰",
+      "minor_code": "PRJ900",
+      "minor_name": "기타휴대폰"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK100",
+      "minor_name": "여성의류"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK200",
+      "minor_name": "남성의류"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK300",
+      "minor_name": "아기의류"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK400",
+      "minor_name": "기타의류"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK500",
+      "minor_name": "모자"
+    },
+    {
+      "major_code": "PRK000",
+      "major_name": "의류",
+      "minor_code": "PRK600",
+      "minor_name": "신발"
+    },
+    {
+      "major_code": "PRL000",
+      "major_name": "현금",
+      "minor_code": "PRL100",
+      "minor_name": "현금"
+    },
+    {
+      "major_code": "PRL000",
+      "major_name": "현금",
+      "minor_code": "PRL200",
+      "minor_name": "수표"
+    },
+    {
+      "major_code": "PRL000",
+      "major_name": "현금",
+      "minor_code": "PRL300",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRL000",
+      "major_name": "현금",
+      "minor_code": "PRL400",
+      "minor_name": "외화"
+    },
+    {
+      "major_code": "PRM000",
+      "major_name": "유가증권",
+      "minor_code": "PRM100",
+      "minor_name": "어음"
+    },
+    {
+      "major_code": "PRM000",
+      "major_name": "유가증권",
+      "minor_code": "PRM200",
+      "minor_name": "상품권"
+    },
+    {
+      "major_code": "PRM000",
+      "major_name": "유가증권",
+      "minor_code": "PRM300",
+      "minor_name": "채권"
+    },
+    {
+      "major_code": "PRM000",
+      "major_name": "유가증권",
+      "minor_code": "PRM400",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRN000",
+      "major_name": "증명서",
+      "minor_code": "PRN100",
+      "minor_name": "신분증"
+    },
+    {
+      "major_code": "PRN000",
+      "major_name": "증명서",
+      "minor_code": "PRN200",
+      "minor_name": "면허증"
+    },
+    {
+      "major_code": "PRN000",
+      "major_name": "증명서",
+      "minor_code": "PRN300",
+      "minor_name": "여권"
+    },
+    {
+      "major_code": "PRN000",
+      "major_name": "증명서",
+      "minor_code": "PRN400",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRN000",
+      "major_name": "증명서",
+      "minor_code": "PRN500",
+      "minor_name": "판결문"
+    },
+    {
+      "major_code": "PRO000",
+      "major_name": "귀금속",
+      "minor_code": "PRO100",
+      "minor_name": "반지"
+    },
+    {
+      "major_code": "PRO000",
+      "major_name": "귀금속",
+      "minor_code": "PRO200",
+      "minor_name": "목걸이"
+    },
+    {
+      "major_code": "PRO000",
+      "major_name": "귀금속",
+      "minor_code": "PRO300",
+      "minor_name": "귀걸이"
+    },
+    {
+      "major_code": "PRO000",
+      "major_name": "귀금속",
+      "minor_code": "PRO400",
+      "minor_name": "시계"
+    },
+    {
+      "major_code": "PRO000",
+      "major_name": "귀금속",
+      "minor_code": "PRO500",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRP000",
+      "major_name": "카드",
+      "minor_code": "PRP100",
+      "minor_name": "신용(체크)카드"
+    },
+    {
+      "major_code": "PRP000",
+      "major_name": "카드",
+      "minor_code": "PRP200",
+      "minor_name": "일반카드"
+    },
+    {
+      "major_code": "PRP000",
+      "major_name": "카드",
+      "minor_code": "PRP300",
+      "minor_name": "기타카드"
+    },
+    {
+      "major_code": "PRP000",
+      "major_name": "카드",
+      "minor_code": "PRP400",
+      "minor_name": "교통카드"
+    },
+    {
+      "major_code": "PRQ000",
+      "major_name": "쇼핑백",
+      "minor_code": "PRQ100",
+      "minor_name": "쇼핑백"
+    },
+    {
+      "major_code": "PRR000",
+      "major_name": "악기",
+      "minor_code": "PRR100",
+      "minor_name": "건반악기"
+    },
+    {
+      "major_code": "PRR000",
+      "major_name": "악기",
+      "minor_code": "PRR200",
+      "minor_name": "관악기"
+    },
+    {
+      "major_code": "PRR000",
+      "major_name": "악기",
+      "minor_code": "PRR300",
+      "minor_name": "타악기"
+    },
+    {
+      "major_code": "PRR000",
+      "major_name": "악기",
+      "minor_code": "PRR400",
+      "minor_name": "현악기"
+    },
+    {
+      "major_code": "PRR000",
+      "major_name": "악기",
+      "minor_code": "PRR900",
+      "minor_name": "기타악기"
+    },
+    {
+      "major_code": "PRX000",
+      "major_name": "유류품",
+      "minor_code": "PRX100",
+      "minor_name": "유류품"
+    },
+    {
+      "major_code": "PRX000",
+      "major_name": "유류품",
+      "minor_code": "PRX200",
+      "minor_name": "무안공항유류품"
+    },
+    {
+      "major_code": "PRY000",
+      "major_name": "무주물",
+      "minor_code": "PRY100",
+      "minor_name": "무주물"
+    },
+    {
+      "major_code": "PRZ000",
+      "major_name": "기타물품",
+      "minor_code": "PRZ100",
+      "minor_name": "기타"
+    },
+    {
+      "major_code": "PRZ000",
+      "major_name": "기타물품",
+      "minor_code": "PRZ200",
+      "minor_name": "매장문화재"
+    },
+    {
+      "major_code": "PRZ000",
+      "major_name": "기타물품",
+      "minor_code": "PRZ600",
+      "minor_name": "선글라스"
+    },
+    {
+      "major_code": "PRZ000",
+      "major_name": "기타물품",
+      "minor_code": "PRZ700",
+      "minor_name": "안경"
+    }
+  ]
+}

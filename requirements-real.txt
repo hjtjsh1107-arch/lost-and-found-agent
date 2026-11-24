@@ -1,0 +1,5 @@
+-r requirements.txt
+paddlepaddle==3.3.1
+paddleocr==3.7.0
+# PaddleOCR의 OpenCV 패키지와 동일한 배포판을 사용합니다.
+opencv-contrib-python==4.10.0.84

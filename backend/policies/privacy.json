@@ -1,0 +1,26 @@
+{
+  "version": "poc-2",
+  "description": "구조화 개인정보 탐지, 텍스트 마스킹 및 공개 전 검사 정책",
+  "public_fields": ["category", "name", "color", "title", "description", "region", "location", "institution"],
+  "restricted_fields": ["finder", "memo", "ocr"],
+  "hold_photo_categories": ["카드", "휴대전화", "지갑"],
+  "min_ocr_confidence": 0.6,
+  "hold_image_types": ["card_number", "card_expiry", "card_security", "resident_id", "passport", "driver_license"],
+  "rules": [
+    {"type":"email","visibility":"restricted","mask":"email","pattern":"(?P<value>[\\w.+-]+@[\\w.-]+\\.[a-zA-Z]{2,})"},
+    {"type":"phone","visibility":"restricted","mask":"phone","pattern":"(?<!\\d)(?P<value>(?:\\+82[ .-]*0?|0)(?:1[016789]|2|[3-6][1-5])[ .()-]*\\d{3,4}[ .()-]*\\d{4})(?!\\d)"},
+    {"type":"resident_id","visibility":"discard","pattern":"(?<!\\d)(?P<value>\\d{6}[\\s-]*[1-8]\\d{6})(?!\\d)"},
+    {"type":"card_expiry","visibility":"discard","pattern":"(?:\\b(?:expiry|exp|valid\\s*thru)\\b|유효기간|만료일)\\s*[:=]?\\s*(?P<value>(?:0[1-9]|1[0-2])\\s*[/.-]\\s*(?:\\d{4}|\\d{2}))(?!\\d)"},
+    {"type":"card_security","visibility":"discard","pattern":"(?:\\b(?:cvc2?|cvv2?|cid)\\b|보안코드)\\s*[:=]?\\s*(?P<value>\\d{3,4})(?!\\d)"},
+    {"type":"driver_license","visibility":"discard","pattern":"(?<!\\d)(?P<value>\\d{2}\\s*-\\s*\\d{2}\\s*-\\s*\\d{6}\\s*-\\s*\\d{2})(?!\\d)"},
+    {"type":"imei","visibility":"discard","pattern":"(?:\\bimei(?:\\s*[12])?\\b|단말기\\s*식별번호)\\s*[:=]?\\s*(?P<value>\\d(?:[ -]?\\d){14,15})(?!\\d)"},
+    {"type":"passport","visibility":"discard","pattern":"(?<![a-z0-9])(?P<value>(?:[a-z]\\d{8}|[a-z]\\d{3}[a-z]\\d{4}))(?![a-z0-9])"},
+    {"type":"account","visibility":"discard","pattern":"(?:계좌(?:번호)?|\\baccount(?:\\s*(?:no|number))?\\b)\\s*[:=]?\\s*(?P<value>\\d(?:[ -]?\\d){6,19})(?!\\d)"},
+    {"type":"license_plate","visibility":"discard","pattern":"(?<!\\d)(?P<value>(?:(?:서울|부산|인천|경기|대구|대전|광주|울산|세종|강원|충북|충남|전북|전남|경북|경남|제주)\\s*)?\\d{2,3}\\s*[가-힣]\\s*\\d{4})(?!\\d)"},
+    {"type":"card_number","visibility":"discard","pattern":"(?<!\\d)(?P<value>\\d(?:[ -]?\\d){12,18})(?!\\d)"},
+    {"type":"serial","visibility":"discard","pattern":"(?:\\b(?:serial(?:\\s*(?:no|number))?|s/n)\\b|일련번호)\\s*[:=]?\\s*(?P<value>[a-z0-9][a-z0-9-]{3,29})"},
+    {"type":"name","visibility":"restricted","mask":"name","pattern":"(?:성명|이름|소유자|예금주|\\b(?:card\\s*)?(?:name|holder)\\b)(?:\\s*[:=]\\s*|[ \\t]+)(?P<value>[가-힣]{2,5}|[a-z][a-z.'-]*(?:[ \\t]+[a-z][a-z.'-]*){0,2})"},
+    {"type":"address","visibility":"restricted","pattern":"(?P<value>[가-힣0-9]+(?:로|길|동)\\s+\\d+(?:-\\d+)?(?:\\s*\\d+호)?)"},
+    {"type":"identifier","visibility":"discard","pattern":"(?<![\\d*])(?P<value>\\d(?:[ .()/-]*\\d){3,})(?!\\d)"}
+  ]
+}
